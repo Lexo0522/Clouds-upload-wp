@@ -1,0 +1,334 @@
+/**
+ * 服务商图标样式
+ * 统一约束所有服务商图标的尺寸
+ */
+
+/* ============================================
+   基础图标样式 - 所有服务商图标的基础
+   ============================================ */
+.wpmcs-provider-icon {
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: contain;
+    /* 强制 SVG 保持纵横比 */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ============================================
+   预设尺寸类 - 使用这些类来控制图标大小
+   ============================================ */
+
+/* 超小尺寸 (16x16) - 用于行内文本、表格等 */
+.wpmcs-provider-icon-xs,
+.wpmcs-provider-icon.size-xs {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* 小尺寸 (20x20) - 用于列表、下拉选项等 */
+.wpmcs-provider-icon-sm,
+.wpmcs-provider-icon.size-sm {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* 中等尺寸 (32x32) - 用于卡片、表单等 */
+.wpmcs-provider-icon-md,
+.wpmcs-provider-icon.size-md {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+/* 大尺寸 (48x48) - 用于预览、突出显示等 */
+.wpmcs-provider-icon-lg,
+.wpmcs-provider-icon.size-lg {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+/* 超大尺寸 (64x64) - 用于英雄区域、大卡片等 */
+.wpmcs-provider-icon-xl,
+.wpmcs-provider-icon.size-xl {
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px;
+    min-height: 64px;
+}
+
+/* 特大尺寸 (96x96) - 用于展示页面等 */
+.wpmcs-provider-icon-xxl,
+.wpmcs-provider-icon.size-xxl {
+    width: 96px !important;
+    height: 96px !important;
+    min-width: 96px;
+    min-height: 96px;
+}
+
+/* ============================================
+   特定场景样式
+   ============================================ */
+
+/* 图标容器 - 保持图标居中和固定尺寸 */
+.wpmcs-provider-preview {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.wpmcs-provider-preview .wpmcs-provider-icon {
+    width: 44px !important;
+    height: 44px !important;
+    max-width: 44px;
+    max-height: 44px;
+}
+
+/* 服务商徽章 - 图标+名称组合 */
+.wpmcs-provider-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    vertical-align: middle;
+}
+
+.wpmcs-provider-badge .wpmcs-provider-icon {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0;
+}
+
+/* 服务商选择器 */
+.wpmcs-provider-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wpmcs-provider-dropdown {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* 状态徽章 */
+.wpmcs-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.wpmcs-status-badge .wpmcs-provider-icon {
+    width: 16px !important;
+    height: 16px !important;
+    filter: brightness(0) invert(1);
+}
+
+/* 服务商卡片 */
+.wpmcs-provider-card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.wpmcs-provider-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.wpmcs-provider-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    flex-shrink: 0;
+}
+
+.wpmcs-provider-card-icon .wpmcs-provider-icon {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.wpmcs-provider-card-info {
+    flex: 1;
+}
+
+.wpmcs-provider-card-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #23282d;
+}
+
+.wpmcs-provider-card-desc {
+    font-size: 13px;
+    color: #666;
+}
+
+/* ============================================
+   表格中的图标
+   ============================================ */
+.wp-list-table .wpmcs-provider-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.wp-list-table .column-wpmcs_cloud_status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ============================================
+   下拉选择框中的图标（如果支持）
+   ============================================ */
+.wpmcs-provider-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpmcs-provider-option .wpmcs-provider-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* ============================================
+   响应式调整
+   ============================================ */
+@media screen and (max-width: 782px) {
+    /* 移动端稍微缩小图标 */
+    .wpmcs-provider-icon-lg,
+    .wpmcs-provider-icon.size-lg {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .wpmcs-provider-preview {
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+    }
+    
+    .wpmcs-provider-preview .wpmcs-provider-icon {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    
+    .wpmcs-provider-card-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .wpmcs-provider-card-icon .wpmcs-provider-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* ============================================
+   打印样式
+   ============================================ */
+@media print {
+    .wpmcs-provider-icon {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* ============================================
+   暗色模式支持（可选）
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    .wpmcs-provider-preview,
+    .wpmcs-provider-card-icon {
+        background: #2c2c2c;
+    }
+    
+    .wpmcs-provider-card {
+        background: #1e1e1e;
+        border-color: #3c3c3c;
+    }
+    
+    .wpmcs-provider-card-name {
+        color: #f0f0f0;
+    }
+    
+    .wpmcs-provider-card-desc {
+        color: #aaa;
+    }
+}
+
+/* ============================================
+   工具类
+   ============================================ */
+
+/* 圆形图标容器 */
+.wpmcs-icon-circle {
+    border-radius: 50%;
+    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpmcs-icon-circle .wpmcs-provider-icon {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+/* 圆角矩形图标容器 */
+.wpmcs-icon-rounded {
+    border-radius: 8px;
+    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpmcs-icon-rounded .wpmcs-provider-icon {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+/* 阴影效果 */
+.wpmcs-icon-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 悬停动画 */
+.wpmcs-icon-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wpmcs-icon-hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

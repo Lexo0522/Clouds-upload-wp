@@ -1,0 +1,280 @@
+/**
+ * 媒体库增强样式
+ */
+
+/* 云端状态列 */
+.column-wpmcs_cloud_status {
+  width: 150px;
+}
+
+.column-wpmcs_cloud_status a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.column-wpmcs_cloud_status a:hover {
+  text-decoration: underline;
+}
+
+/* 云端状态图标 */
+.wpmcs-status-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.wpmcs-status-success {
+  background: #46b450;
+  color: #fff;
+}
+
+.wpmcs-status-error {
+  background: #dc3232;
+  color: #fff;
+}
+
+.wpmcs-status-pending {
+  background: #999;
+  color: #fff;
+}
+
+/* 媒体行操作 */
+.wpmcs-row-action {
+  color: #0073aa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.wpmcs-row-action:hover {
+  color: #00a0d2;
+}
+
+/* 元数据框样式 */
+.wpmcs-cloud-meta-box {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wpmcs-cloud-meta-box p {
+  margin: 10px 0;
+}
+
+.wpmcs-cloud-meta-box code {
+  font-family: Monaco, Consolas, monospace;
+  font-size: 12px;
+}
+
+.wpmcs-cloud-meta-box ul {
+  margin: 5px 0;
+  padding-left: 25px;
+}
+
+.wpmcs-cloud-meta-box li {
+  margin: 3px 0;
+}
+
+.wpmcs-cloud-meta-box .button {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* 按钮样式增强 */
+.wpmcs-reupload:disabled,
+.wpmcs-copy-url:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 加载状态 */
+.wpmcs-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.wpmcs-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: wpmcsSpin 0.6s linear infinite;
+}
+
+@keyframes wpmcsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 通知样式 */
+.wpmcs-notification {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 350px;
+  padding: 16px 20px;
+}
+
+.wpmcs-notification-success {
+  background: #46b450;
+  color: #fff;
+}
+
+.wpmcs-notification-error {
+  background: #dc3232;
+  color: #fff;
+}
+
+.wpmcs-notification-warning {
+  background: #ffb900;
+  color: #333;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 782px) {
+  .column-wpmcs_cloud_status {
+    width: 100px;
+  }
+  
+  .wpmcs-cloud-meta-box {
+    font-size: 12px;
+  }
+}
+
+/* 表格行高亮 */
+.wpmcs-row-highlight {
+  background-color: #fff9e6 !important;
+}
+
+.wpmcs-row-error {
+  background-color: #fff3f3 !important;
+}
+
+.wpmcs-row-success {
+  background-color: #f7fff7 !important;
+}
+
+/* 复制按钮 */
+.wpmcs-copy-url {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.wpmcs-copy-url:hover {
+  background: #e0e0e0;
+  border-color: #999;
+}
+
+.wpmcs-copy-url:active {
+  background: #d0d0d0;
+}
+
+/* 重新上传按钮 */
+.wpmcs-reupload {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 状态徽章 */
+.wpmcs-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+}
+
+.wpmcs-badge-success {
+  background-color: #46b450;
+  color: #fff;
+}
+
+.wpmcs-badge-error {
+  background-color: #dc3232;
+  color: #fff;
+}
+
+.wpmcs-badge-warning {
+  background-color: #ffb900;
+  color: #333;
+}
+
+.wpmcs-badge-info {
+  background-color: #0073aa;
+  color: #fff;
+}
+
+/* 工具提示 */
+[data-wpmcs-tooltip] {
+  position: relative;
+  cursor: help;
+}
+
+[data-wpmcs-tooltip]:hover::before {
+  content: attr(data-wpmcs-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+  z-index: 1000;
+  margin-bottom: 5px;
+}
+
+[data-wpmcs-tooltip]:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+  z-index: 1000;
+}
+
+/* 进度条 */
+.wpmcs-progress-bar {
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.wpmcs-progress-bar-fill {
+  height: 100%;
+  background: #46b450;
+  transition: width 0.3s ease;
+}
+
+.wpmcs-progress-bar-fill.error {
+  background: #dc3232;
+}

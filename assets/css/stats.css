@@ -1,0 +1,225 @@
+.wpmcs-stats-page {
+    max-width: 1400px;
+}
+
+.wpmcs-stats-intro {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.wpmcs-stats-overview {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.wpmcs-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.wpmcs-overview-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.wpmcs-overview-card:hover {
+    transform: translateY(-2px);
+}
+
+.wpmcs-overview-card:nth-child(2) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.wpmcs-overview-card:nth-child(3) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.wpmcs-overview-card:nth-child(4) {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.wpmcs-overview-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    opacity: 0.9;
+}
+
+.wpmcs-overview-content {
+    flex: 1;
+}
+
+.wpmcs-overview-label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.wpmcs-overview-value {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.wpmcs-stats-actions {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wpmcs-stats-actions .button .dashicons {
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.wpmcs-stats-actions .button.updating .dashicons {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.wpmcs-last-updated {
+    color: #666;
+    font-size: 13px;
+}
+
+.wpmcs-stats-details {
+    margin-bottom: 20px;
+}
+
+.wpmcs-stats-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.wpmcs-stats-section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.wpmcs-stats-section h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.wpmcs-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.wpmcs-stat-item {
+    text-align: center;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.wpmcs-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.wpmcs-stat-value {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0073aa;
+}
+
+.wpmcs-stat-value.wpmcs-success {
+    color: #46b450;
+}
+
+.wpmcs-stat-value.wpmcs-warning {
+    color: #ffb900;
+}
+
+.wpmcs-stat-sub {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.wpmcs-chart-container {
+    background: #fafafa;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 300px;
+    position: relative;
+}
+
+#traffic-types-container table {
+    margin-top: 10px;
+}
+
+#traffic-types-container th,
+#traffic-types-container td {
+    padding: 12px;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 782px) {
+    .wpmcs-overview-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wpmcs-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .wpmcs-overview-value {
+        font-size: 24px;
+    }
+    
+    .wpmcs-stat-value {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wpmcs-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wpmcs-chart-container {
+        padding: 15px;
+        min-height: 250px;
+    }
+}
