@@ -1,0 +1,72 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * 阿里云 OSS 适配器
+ */
+class WPMCS_Aliyun_OSS_Adapter extends WPMCS_Cloud_Adapter {
+	
+	/**
+	 * 获取服务商标识
+	 */
+	public function get_provider_key() {
+		return 'aliyun_oss';
+	}
+	
+	/**
+	 * 检查配置是否完整
+	 */
+	public function is_configured() {
+		$required = array( 'access_key', 'secret_key', 'bucket', 'endpoint' );
+		
+		foreach ( $required as $field ) {
+			if ( empty( $this->settings[ $field ] ) ) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * 上传文件
+	 */
+	public function upload( $local_path, $cloud_key, $mime_type = '' ) {
+		if ( ! $this->is_configured() ) {
+			return new WP_Error( 'wpmcs_aliyun_oss_not_configured', '阿里云 OSS 配置不完整。' );
+		}
+		
+		if ( ! file_exists( $local_path ) || ! is_readable( $local_path ) ) {
+			return new WP_Error( 'wpmcs_file_missing', '待上传文件不存在或不可读。' );
+		}
+		
+		if ( ! function_exists( 'curl_init' ) ) {
+			return new WP_Error( 'wpmcs_curl_missing', '当前 PHP 环境未启用 cURL 扩展。' );
+		}
+		
+		// 创建 OSS 存储实例
+		$storage = new Aliyun_OSS_Storage( array(
+			'access_key' => $this->settings['access_key'],
+			'secret_key' => $this->settings['secret_key'],
+			'bucket'     => $this->settings['bucket'],
+			'endpoint'   => isset( $this->settings['endpoint'] ) ? $this->settings['endpoint'] : 'oss-cn-hangzhou.aliyuncs.com',
+			'domain'     => isset( $this->settings['domain'] ) ? $this->settings['domain'] : '',
+		) );
+		
+		try {
+			$url = $storage->upload( $local_path, $cloud_key );
+			
+			return array(
+				'provider' => $this->get_provider_key(),
+				'key'      => $cloud_key,
+				'url'      => $url,
+			);
+			
+		} catch ( Exception $e ) {
+			return new WP_Error( 'wpmcs_aliyun_oss_upload_failed', $e->getMessage() );
+		}
+	}
+}

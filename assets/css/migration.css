@@ -1,0 +1,399 @@
+/**
+ * 批量迁移工具样式
+ */
+
+.wpmcs-migration-page {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.wpmcs-migration-intro {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wpmcs-migration-stats {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wpmcs-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.wpmcs-stat-item {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f7f7f7, #fff);
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wpmcs-stat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wpmcs-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.wpmcs-stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0073aa;
+    line-height: 1;
+}
+
+.wpmcs-migration-options {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wpmcs-option-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.wpmcs-option-label input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.wpmcs-migration-controls {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wpmcs-migration-controls .button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.wpmcs-migration-controls .button .dashicons {
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+.wpmcs-migration-progress {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wpmcs-progress-bar-container {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.wpmcs-progress-bar {
+    height: 35px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wpmcs-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #00a0d2, #00bee8);
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.wpmcs-progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.wpmcs-progress-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0073aa;
+    margin-top: 10px;
+}
+
+.wpmcs-progress-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.wpmcs-progress-item {
+    text-align: center;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 6px;
+    border: 1px solid #e1e1e1;
+}
+
+.wpmcs-progress-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wpmcs-progress-value {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.wpmcs-progress-value.wpmcs-success {
+    color: #46b450;
+}
+
+.wpmcs-progress-value.wpmcs-failed {
+    color: #dc3232;
+}
+
+.wpmcs-migration-log {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wpmcs-log-container {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: Monaco, Consolas, 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.wpmcs-log-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wpmcs-log-container::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    border-radius: 4px;
+}
+
+.wpmcs-log-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.wpmcs-log-container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.wpmcs-log-entry {
+    margin-bottom: 4px;
+    padding: 3px 0;
+    border-bottom: 1px solid #2e2e2e;
+}
+
+.wpmcs-log-entry:last-child {
+    border-bottom: none;
+}
+
+.wpmcs-log-entry.success {
+    color: #46b450;
+}
+
+.wpmcs-log-entry.error {
+    color: #f44336;
+}
+
+.wpmcs-log-entry.warning {
+    color: #ff9800;
+}
+
+.wpmcs-log-entry.info {
+    color: #2196f3;
+}
+
+.wpmcs-migration-failed {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    animation: slideIn 0.3s ease-out;
+}
+
+.wpmcs-failed-list table {
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.wpmcs-failed-list table th {
+    background: #f7f7f7;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+}
+
+.wpmcs-failed-list table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.wpmcs-failed-list table tr:hover {
+    background: #f9f9f9;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 782px) {
+    .wpmcs-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .wpmcs-stat-item {
+        padding: 15px;
+    }
+    
+    .wpmcs-stat-value {
+        font-size: 24px;
+    }
+    
+    .wpmcs-progress-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .wpmcs-migration-controls .button {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* 按钮加载状态 */
+.wpmcs-migration-controls .button.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.wpmcs-migration-controls .button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 工具提示 */
+.wpmcs-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.wpmcs-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.wpmcs-tooltip:hover::before {
+    opacity: 1;
+}

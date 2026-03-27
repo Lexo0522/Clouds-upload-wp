@@ -1,0 +1,1046 @@
+/* 向导容器 */
+.wpmcs-wizard-wrap {
+	max-width: 980px;
+	margin: 24px auto;
+}
+
+/* Wizard v2 layout */
+.wpmcs-wizard-wrap {
+	max-width: 1240px;
+}
+
+.wpmcs-wizard-shell {
+	position: relative;
+	z-index: 1;
+}
+
+.wpmcs-wizard-hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
+	gap: 20px;
+	margin-bottom: 22px;
+}
+
+.wpmcs-wizard-hero-copy,
+.wpmcs-wizard-hero-card,
+.wpmcs-wizard-aside .wpmcs-aside-card {
+	background: rgba(255, 255, 255, 0.98);
+	border: 1px solid #e6e8ef;
+	border-radius: 22px;
+	box-shadow: 0 16px 40px rgba(16, 24, 40, 0.08);
+}
+
+.wpmcs-wizard-hero-copy {
+	padding: 28px 30px;
+}
+
+.wpmcs-wizard-kicker {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 12px;
+	margin-bottom: 14px;
+	border-radius: 999px;
+	background: rgba(31, 75, 153, 0.08);
+	color: #1f4b99;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.wpmcs-wizard-hero-copy h1 {
+	margin: 0 0 12px;
+	font-size: 40px;
+	line-height: 1.15;
+	letter-spacing: -0.04em;
+	color: #152238;
+}
+
+.wpmcs-wizard-hero-copy > p {
+	max-width: 760px;
+	margin: 0 0 22px;
+	font-size: 16px;
+	line-height: 1.85;
+	color: #5c667a;
+}
+
+.wpmcs-wizard-highlights {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.wpmcs-highlight-item {
+	padding: 16px 16px 14px;
+	border-radius: 16px;
+	background: linear-gradient(180deg, #fbfcff 0%, #f6f8fc 100%);
+	border: 1px solid #e6ebf4;
+}
+
+.wpmcs-highlight-item .dashicons {
+	display: block;
+	margin-bottom: 10px;
+	color: #1f4b99;
+	font-size: 22px;
+	width: 22px;
+	height: 22px;
+}
+
+.wpmcs-highlight-item strong {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #152238;
+}
+
+.wpmcs-highlight-item em {
+	display: block;
+	font-style: normal;
+	font-size: 13px;
+	line-height: 1.65;
+	color: #5c667a;
+}
+
+.wpmcs-wizard-hero-card {
+	padding: 22px 22px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.wpmcs-wizard-hero-card-title,
+.wpmcs-aside-card h3 {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.35;
+	font-weight: 700;
+	color: #152238;
+}
+
+.wpmcs-wizard-provider-summary {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 16px;
+	border-radius: 18px;
+	background: linear-gradient(180deg, #f9fbff 0%, #f4f7fd 100%);
+	border: 1px solid #e6ebf4;
+}
+
+.wpmcs-wizard-provider-summary img {
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+}
+
+.wpmcs-wizard-provider-summary strong {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 16px;
+	color: #152238;
+}
+
+.wpmcs-wizard-provider-summary span {
+	font-size: 13px;
+	color: #5c667a;
+}
+
+.wpmcs-wizard-status-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 10px;
+}
+
+.wpmcs-wizard-status-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 14px;
+	border-radius: 14px;
+	background: #f8fafc;
+	border: 1px solid #e5ebf3;
+}
+
+.wpmcs-wizard-status-list span {
+	font-size: 13px;
+	color: #5c667a;
+}
+
+.wpmcs-wizard-status-list strong {
+	font-size: 13px;
+	color: #152238;
+}
+
+.wpmcs-wizard-provider-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	align-self: flex-start;
+	padding: 10px 14px;
+	border-radius: 999px;
+	background: linear-gradient(135deg, #1f4b99 0%, #0f766e 100%);
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.wpmcs-wizard-provider-link:hover {
+	opacity: 0.92;
+	color: #fff;
+}
+
+.wpmcs-wizard-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 320px;
+	gap: 20px;
+	align-items: start;
+}
+
+.wpmcs-wizard-main {
+	min-width: 0;
+}
+
+.wpmcs-wizard-aside {
+	display: grid;
+	gap: 16px;
+}
+
+.wpmcs-aside-card {
+	padding: 20px 18px;
+}
+
+.wpmcs-aside-card h3 {
+	margin-bottom: 14px;
+}
+
+.wpmcs-wizard-message {
+	margin: 0 0 18px;
+	padding: 0;
+	border-radius: 14px;
+}
+
+.wpmcs-wizard-message.notice-success,
+.wpmcs-wizard-message.notice-warning,
+.wpmcs-wizard-message.notice-error {
+	display: block;
+	padding: 12px 14px;
+	border-width: 1px;
+}
+
+.wpmcs-wizard-checklist,
+.wpmcs-side-notes {
+	margin: 0;
+	padding-left: 20px;
+	color: #5c667a;
+	line-height: 1.8;
+}
+
+.wpmcs-side-notes {
+	list-style: disc;
+}
+
+.wpmcs-side-links {
+	display: grid;
+	gap: 10px;
+}
+
+.wpmcs-side-links a {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 11px 14px;
+	border-radius: 12px;
+	background: #f5f8ff;
+	text-decoration: none;
+	color: #1f4b99;
+	font-weight: 600;
+}
+
+.wpmcs-side-links a:hover {
+	background: #1f4b99;
+	color: #fff;
+}
+
+.wpmcs-side-links .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+@media screen and (max-width: 1080px) {
+	.wpmcs-wizard-hero,
+	.wpmcs-wizard-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.wpmcs-wizard-highlights {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.wpmcs-wizard-hero-copy h1 {
+		font-size: 30px;
+	}
+
+	.wpmcs-wizard-hero-copy,
+	.wpmcs-wizard-hero-card,
+	.wpmcs-aside-card {
+		padding: 18px;
+	}
+
+	.wpmcs-wizard-status-list li {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.wpmcs-wizard-provider-link {
+		width: 100%;
+	}
+}
+
+.wpmcs-wizard-container {
+	background: #fff;
+	border: 1px solid #e6e8ef;
+	border-radius: 18px;
+	box-shadow: 0 16px 40px rgba(16, 24, 40, 0.08);
+	overflow: hidden;
+}
+
+/* 步骤导航 */
+.wpmcs-wizard-steps {
+	display: flex;
+	justify-content: space-between;
+	padding: 28px 44px 24px;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	position: relative;
+}
+
+.wpmcs-wizard-steps::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 60px;
+	right: 60px;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.3);
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+.wpmcs-step-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+	flex: 1;
+}
+
+.wpmcs-step-number {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	transition: all 0.3s ease;
+}
+
+.wpmcs-step-item.active .wpmcs-step-number {
+	background: #fff;
+	color: #667eea;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	transform: scale(1.1);
+}
+
+.wpmcs-step-item.completed .wpmcs-step-number {
+	background: #4caf50;
+	color: #fff;
+}
+
+.wpmcs-step-number .dashicons {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+.wpmcs-step-info {
+	text-align: center;
+}
+
+.wpmcs-step-name {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.35;
+	transition: all 0.3s ease;
+}
+
+.wpmcs-step-item.active .wpmcs-step-name,
+.wpmcs-step-item.completed .wpmcs-step-name {
+	color: #fff;
+}
+
+/* 内容区域 */
+.wpmcs-wizard-content {
+	padding: 48px 56px;
+	min-height: 420px;
+}
+
+.wpmcs-step-content {
+	max-width: 860px;
+	margin: 0 auto;
+}
+
+.wpmcs-step-content h2 {
+	font-size: 30px;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	margin: 0 0 14px 0;
+	color: #152238;
+}
+
+.wpmcs-step-content > p,
+.wpmcs-step-content li,
+.wpmcs-step-content .description {
+	color: #5c667a;
+	font-size: 15px;
+	line-height: 1.8;
+}
+
+.wpmcs-step-content > p {
+	margin-bottom: 24px;
+}
+
+/* 欢迎步骤 */
+.wpmcs-wizard-welcome {
+	text-align: center;
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.wpmcs-welcome-icon {
+	margin-bottom: 28px;
+	display: flex;
+	justify-content: center;
+}
+
+.wpmcs-welcome-icon .dashicons {
+	font-size: 80px;
+	width: 80px;
+	height: 80px;
+	color: #667eea;
+	background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.wpmcs-welcome-icon img {
+	display: block;
+	width: 96px;
+	height: 96px;
+	object-fit: contain;
+}
+
+.wpmcs-wizard-welcome h2 {
+	margin-top: 0;
+	font-size: 34px;
+	line-height: 1.25;
+	letter-spacing: -0.03em;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.wpmcs-welcome-text {
+	font-size: 16px;
+	line-height: 1.85;
+	color: #5c667a;
+	max-width: 560px;
+	margin: 0 auto 34px;
+}
+
+.wpmcs-features-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 18px;
+	max-width: 680px;
+	margin: 0 auto 34px;
+}
+
+.wpmcs-feature {
+	padding: 22px 20px 20px;
+	background: linear-gradient(180deg, #fbfcff 0%, #f6f8fc 100%);
+	border: 1px solid #e7ebf3;
+	border-radius: 14px;
+	text-align: left;
+}
+
+.wpmcs-feature .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+	color: #667eea;
+	margin-bottom: 8px;
+}
+
+.wpmcs-feature h3 {
+	margin: 0 0 6px 0;
+	font-size: 15px;
+	line-height: 1.35;
+	color: #152238;
+}
+
+.wpmcs-feature p {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.7;
+	color: #5c667a;
+}
+
+.wpmcs-wizard-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.wpmcs-wizard-start {
+	padding: 13px 34px;
+	font-size: 16px;
+	line-height: 1.2;
+	height: auto;
+	border-radius: 999px;
+	box-shadow: 0 12px 24px rgba(102, 126, 234, 0.22);
+}
+
+.wpmcs-wizard-skip {
+	color: #999;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.wpmcs-wizard-skip:hover {
+	color: #666;
+}
+
+/* 服务商选择 */
+.wpmcs-wizard-providers h2 {
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.wpmcs-wizard-providers > p {
+	text-align: center;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.8;
+}
+
+.wpmcs-provider-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 18px;
+	margin: 28px 0 18px;
+}
+
+.wpmcs-provider-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 26px 18px 22px;
+	background: linear-gradient(180deg, #fbfcff 0%, #f7f9fd 100%);
+	border: 2px solid #e0e0e0;
+	border-radius: 16px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.wpmcs-provider-card:hover {
+	background: #f0f4ff;
+	border-color: #667eea;
+}
+
+.wpmcs-provider-card.selected {
+	background: #f0f4ff;
+	border-color: #667eea;
+	box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.wpmcs-provider-card input {
+	position: absolute;
+	opacity: 0;
+}
+
+.wpmcs-provider-icon {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 14px;
+}
+
+.wpmcs-provider-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.wpmcs-provider-info {
+	text-align: center;
+}
+
+.wpmcs-provider-name {
+	display: block;
+	font-weight: 600;
+	color: #1e1e1e;
+	margin-bottom: 6px;
+	line-height: 1.35;
+}
+
+.wpmcs-provider-link {
+	font-size: 13px;
+	line-height: 1.5;
+	color: #667eea;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+}
+
+.wpmcs-provider-link:hover {
+	color: #764ba2;
+}
+
+.wpmcs-provider-link .dashicons {
+	font-size: 14px;
+	width: 14px;
+	height: 14px;
+}
+
+.wpmcs-provider-check {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+	color: #4caf50;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.wpmcs-provider-card.selected .wpmcs-provider-check {
+	opacity: 1;
+}
+
+/* 配置步骤 */
+.wpmcs-wizard-configure h2 {
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.wpmcs-wizard-configure > p {
+	text-align: center;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.8;
+}
+
+#wpmcs-wizard-provider-fields {
+	margin-top: 28px;
+}
+
+.wpmcs-config-help {
+	margin-top: 28px;
+	padding: 24px 26px;
+	background: linear-gradient(180deg, #fbfcff 0%, #f7f9fd 100%);
+	border-radius: 14px;
+	border: 1px solid #e4e8f0;
+	border-left: 4px solid #667eea;
+}
+
+.wpmcs-config-help h3 {
+	margin: 0 0 12px 0;
+	font-size: 16px;
+	line-height: 1.35;
+	color: #152238;
+}
+
+.wpmcs-config-help ol {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.wpmcs-config-help li {
+	margin-bottom: 10px;
+	color: #5c667a;
+	font-size: 14px;
+	line-height: 1.75;
+}
+
+.wpmcs-config-help a {
+	color: #667eea;
+	text-decoration: none;
+}
+
+.wpmcs-config-help a:hover {
+	text-decoration: underline;
+}
+
+/* 测试步骤 */
+.wpmcs-wizard-test h2 {
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.wpmcs-wizard-test > p {
+	text-align: center;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.8;
+}
+
+.wpmcs-test-status {
+	text-align: center;
+	padding: 44px 36px;
+}
+
+.wpmcs-test-pending,
+.wpmcs-test-running,
+.wpmcs-test-success,
+.wpmcs-test-error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wpmcs-test-status .dashicons {
+	font-size: 48px;
+	width: 48px;
+	height: 48px;
+	margin-bottom: 16px;
+}
+
+.wpmcs-test-pending .dashicons {
+	color: #999;
+}
+
+.wpmcs-test-running .dashicons {
+	color: #667eea;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.wpmcs-test-success .dashicons {
+	color: #4caf50;
+}
+
+.wpmcs-test-error .dashicons {
+	color: #f44336;
+}
+
+.wpmcs-test-status h3 {
+	margin: 0 0 8px 0;
+	font-size: 20px;
+	line-height: 1.35;
+	color: #152238;
+}
+
+.wpmcs-test-status p {
+	margin: 0;
+	color: #5c667a;
+	line-height: 1.75;
+}
+
+.wpmcs-test-error-message {
+	color: #f44336;
+	background: #ffebee;
+	padding: 14px 16px;
+	border-radius: 10px;
+	margin-top: 10px;
+	max-width: 400px;
+	line-height: 1.7;
+}
+
+.wpmcs-test-actions {
+	text-align: center;
+	margin-top: 24px;
+}
+
+.wpmcs-test-connection {
+	padding: 10px 24px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.wpmcs-test-connection .dashicons {
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+/* 选项步骤 */
+.wpmcs-wizard-options h2 {
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.wpmcs-wizard-options > p {
+	text-align: center;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.8;
+}
+
+.wpmcs-wizard-options .form-table {
+	margin-top: 28px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 开关样式 */
+.wpmcs-switch {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 24px;
+}
+
+.wpmcs-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.wpmcs-switch-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.3s;
+	border-radius: 24px;
+}
+
+.wpmcs-switch-slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: 0.3s;
+	border-radius: 50%;
+}
+
+.wpmcs-switch input:checked + .wpmcs-switch-slider {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.wpmcs-switch input:checked + .wpmcs-switch-slider:before {
+	transform: translateX(24px);
+}
+
+/* 完成步骤 */
+.wpmcs-wizard-complete {
+	text-align: center;
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.wpmcs-complete-icon {
+	margin-bottom: 24px;
+}
+
+.wpmcs-complete-icon .dashicons {
+	font-size: 80px;
+	width: 80px;
+	height: 80px;
+	color: #4caf50;
+	background: rgba(76, 175, 80, 0.1);
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.wpmcs-wizard-complete h2 {
+	color: #4caf50;
+}
+
+.wpmcs-complete-actions {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin: 24px 0;
+}
+
+.wpmcs-complete-tips {
+	margin-top: 34px;
+	padding: 26px 28px;
+	background: linear-gradient(180deg, #fbfcff 0%, #f7f9fd 100%);
+	border-radius: 14px;
+	border: 1px solid #e4e8f0;
+	text-align: left;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wpmcs-complete-tips h3 {
+	margin: 0 0 16px 0;
+	font-size: 16px;
+	line-height: 1.35;
+	color: #152238;
+}
+
+.wpmcs-complete-tips ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wpmcs-complete-tips li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 9px 0;
+	color: #5c667a;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+.wpmcs-complete-tips .dashicons {
+	color: #667eea;
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+/* 导航按钮 */
+.wpmcs-wizard-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	padding-top: 24px;
+	margin-top: 24px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.wpmcs-wizard-nav .button {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 10px 18px;
+}
+
+.wpmcs-wizard-nav .button .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.wpmcs-wizard-nav .button-primary {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	border: none;
+	padding: 12px 26px;
+	font-weight: 500;
+	border-radius: 999px;
+	box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+}
+
+.wpmcs-wizard-nav .button-primary:hover {
+	background: linear-gradient(135deg, #5a6fd6 0%, #6a4290 100%);
+}
+
+/* 底部 */
+.wpmcs-wizard-footer {
+	text-align: center;
+	padding: 18px 16px;
+	background: #f8f9fa;
+	border-top: 1px solid #e0e0e0;
+}
+
+.wpmcs-wizard-skip-link {
+	color: #999;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.wpmcs-wizard-skip-link:hover {
+	color: #666;
+}
+
+/* 响应式 */
+@media screen and (max-width: 782px) {
+	.wpmcs-wizard-wrap {
+		margin: 16px auto;
+	}
+
+	.wpmcs-wizard-steps {
+		padding: 16px 20px;
+		flex-wrap: wrap;
+	}
+	
+	.wpmcs-wizard-steps::before {
+		display: none;
+	}
+	
+	.wpmcs-step-item {
+		flex: 0 0 33.333%;
+		margin-bottom: 8px;
+	}
+	
+	.wpmcs-provider-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.wpmcs-features-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wpmcs-step-content {
+		max-width: none;
+	}
+
+	.wpmcs-step-content h2 {
+		font-size: 26px;
+	}
+
+	.wpmcs-wizard-content {
+		padding: 28px 22px;
+	}
+
+	.wpmcs-provider-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.wpmcs-complete-actions {
+		flex-direction: column;
+		align-items: center;
+	}
+}
