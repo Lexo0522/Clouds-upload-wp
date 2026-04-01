@@ -14,7 +14,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-define('WMCS_VERSION', '0.1.0');
+define('WMCS_VERSION', '0.2.2');
 define('WMCS_PLUGIN_FILE', __FILE__);
 define('WMCS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('WMCS_PLUGIN_URL', plugin_dir_url(__FILE__));
